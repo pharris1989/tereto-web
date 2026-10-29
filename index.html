@@ -360,6 +360,7 @@ footer{text-align:center;font-size:.75rem;color:var(--muted);padding-block:18px}
 .tool .info{position:absolute;top:-12px;right:10px;width:22px;height:22px;border-radius:50%;background:var(--rtext);color:#fff;border:2px solid #fff;font-size:.7rem;font-weight:700;display:grid;place-items:center}
 .stats{display:grid;grid-template-columns:1.6fr 1fr;gap:28px}
 .chart{background:#fff;border-radius:26px;padding:12px 16px 14px}
+.chart h3{font-family:var(--display);font-weight:700;color:var(--rtext);font-size:1.15rem;margin:4px 0 2px}
 .chart small{color:#9c8aa8}
 .chart svg{width:100%;height:auto;display:block}
 .route{background:#fff;border-radius:20px;padding:16px 18px}
@@ -886,7 +887,7 @@ function teacher(){
   view.innerHTML=`<div class="dash">${side([['folder','Mis cursos'],['board','Capacitaciones'],['doc','Lecturas'],['envelope','Información'],['headset','Chatbot']],[['plusbox','Nuevo Contenido'],['cal','Calendario'],['heart','Notificaciones']])}
   <div class="main"><div class="panel">
     <section class="hi"><h1>Hola, Alberto</h1><span>Qué bueno tenerte de vuelta</span></section>
-    <section id="sec-cursos"><h2>Cursos creados</h2><div class="courses" id="courses">
+    <section id="sec-cursos"><h2>Progreso por grupo</h2><div class="courses" id="courses">
       ${c.map(([g,p],i)=>`<button class="course" data-c="${i}" aria-label="Grupo ${g}, ${p}% completo"><small>Grupo</small><strong>${g}</strong><div class="pct">${p}%</div><div class="pb"><i style="width:${p}%"></i></div>
         <div class="st"><b style="background:${p>=100?'#4CB487':'#F2A541'}">${p>=100?'✓':'!'}</b>${p>=100?'Completo':'Incompleto'}</div></button>`).join('')}
       <button class="course add" id="addC" aria-label="Crear curso"><span class="plus">+</span></button>
@@ -941,7 +942,7 @@ function institution(){
   <div class="main"><div class="panel">
     <section class="hi"><h1>Colegio San Juan de Dios</h1></section>
     <section id="sec-stats"><div class="stats">
-      <div class="chart"><small>Estadísticas · participación en el plan de inclusión</small><div id="chartBox">${chartSvg(S.insSeg)}</div>
+      <div class="chart"><h3>Evolución de la Ruta</h3><small>Estadísticas · participación en el plan de inclusión</small><div id="chartBox">${chartSvg(S.insSeg)}</div>
         <div class="legend"><span><i style="background:#8A63BD"></i>Este año</span><span><i style="background:#a8a2ad"></i>Año anterior</span></div></div>
       <div><div class="route" id="sec-route"><h3>Ruta de Seguimiento</h3>
         ${[['Preescolar',48],['Primaria',72],['Bachillerato',68]].map(([n,p])=>`<div><span>${n}</span><b title="${p}%"><i style="width:${p}%"></i></b></div>`).join('')}</div>
