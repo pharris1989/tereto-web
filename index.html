@@ -73,8 +73,8 @@ button{cursor:pointer}
 .enter-menu>button{all:unset;cursor:pointer;display:flex;gap:18px;align-items:center;padding:10px 12px;border-radius:16px;transition:background .15s}
 .enter-menu>button:hover,.enter-menu>button:focus-visible{background:rgba(255,255,255,.38)}
 .enter-menu>button:focus-visible{outline:2px solid var(--navy)}
-.enter-menu .ic{width:54px;height:54px;flex:none;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 2px 6px rgba(120,84,10,.18)}
-.enter-menu .ic img{width:50px;height:50px;object-fit:contain}
+.enter-menu .ic{width:50px;height:50px;flex:none;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 2px 6px rgba(120,84,10,.18)}
+.enter-menu .ic svg{width:26px;height:26px;fill:none;stroke:#B4521F;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .enter-menu b{display:block;font-family:var(--display);font-weight:600;font-size:1.05rem;color:var(--ink)}
 .enter-menu small{color:#5a4a26;font-size:.85rem}
 .enter-foot{border-top:1px solid #D8AE55;margin-top:6px;padding:10px 12px 2px;font-size:.82rem;color:#5a4a26}
@@ -160,6 +160,50 @@ button{cursor:pointer}
 .frame::before,.frame::after{content:"";position:absolute;border-radius:50%;background:#efefef;z-index:-1}
 .frame::before{width:240px;height:240px;left:52%;top:-120px} .frame::after{width:160px;height:160px;right:-60px;bottom:30px}
 .frame h2{font-size:clamp(1.9rem,3.2vw,2.8rem);max-width:20ch;margin-top:8px}
+.ods{position:relative;overflow:hidden;padding-block:70px 80px;isolation:isolate}
+.ods .blob{position:absolute;z-index:-1;border-radius:50%;filter:blur(.5px)}
+.ods .b1{width:300px;height:300px;right:-90px;top:-110px;background:#FCE3C8;border-radius:58% 42% 60% 40%/50% 55% 45% 50%}
+.ods .b2{width:260px;height:240px;left:-110px;bottom:-90px;background:#FBC33E;border-radius:45% 55% 40% 60%/60% 40% 60% 40%}
+.ods .b3{width:200px;height:220px;right:-80px;bottom:-80px;background:#A6E6CF;border-radius:55% 45% 50% 50%}
+.ods .curl{position:absolute;right:30px;top:60px;width:150px;z-index:-1}
+.ods h2{font-size:clamp(2rem,4vw,3.3rem);margin-top:10px;letter-spacing:-.01em}
+.ods h2 span{color:#F15A24}
+.ods .intro{max-width:62ch;margin-top:14px;color:var(--muted);font-size:1.05rem;line-height:1.6}
+.odsgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:34px}
+.odscard{position:relative;overflow:hidden;background:#fff;border:1px solid #F5E6DA;border-radius:22px;padding:30px 30px 28px;box-shadow:0 10px 26px rgba(15,34,51,.05);transition:transform .25s, box-shadow .25s}
+.odscard::after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-36px;top:-36px;background:var(--soft);opacity:.55;z-index:0}
+.odscard>*{position:relative;z-index:1}
+.odscard:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(15,34,51,.1)}
+.sdg{width:clamp(145px,12.5vw,170px);aspect-ratio:1;border-radius:14px;background:var(--c);color:#fff;padding:12px 12px 10px;display:grid;grid-template-rows:auto 1fr;box-shadow:0 8px 18px color-mix(in srgb,var(--c) 30%,transparent)}
+.sdg .top{display:flex;gap:8px;align-items:flex-start}
+.sdg .n{font-family:"Oswald","Lexend",sans-serif;font-weight:700;font-size:2.1rem;letter-spacing:-.04em;line-height:.9}
+.sdg .l{font-family:var(--display);font-weight:700;font-size:.58rem;line-height:1.15;text-transform:uppercase;letter-spacing:-.01em;min-width:0;padding-top:2px}
+.sdg svg{width:58%;margin:auto;fill:none;stroke:#fff;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+.odscard h3{font-size:clamp(1.25rem,1.9vw,1.6rem);margin-top:22px;line-height:1.1}
+.odscard p{margin-top:12px;color:var(--muted);font-size:.95rem;line-height:1.5}
+.odsbar{margin-top:24px;display:grid;grid-template-columns:1.2fr 1fr 1.2fr;align-items:center;background:#FFFBF7;border:1px solid #F5E6DA;border-radius:22px;padding:22px 30px}
+.odsbar>div{padding:4px 18px}
+.odsbar>div+div{border-left:1px solid #EADBD0}
+.odsbrand{display:flex;gap:16px;align-items:center}
+.odsbrand svg{width:84px;flex:none;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.odsbrand:hover svg{transform:rotate(180deg)}
+.odsbrand .w{font-family:var(--display);font-weight:800;color:#0A97D9;font-size:clamp(1.4rem,2.4vw,2.1rem);line-height:1;letter-spacing:-.01em}
+.odsbrand .w small{display:inline-block;font-size:.4em;line-height:1.05;vertical-align:middle;margin-left:6px;font-weight:700}
+.odsbrand p{font-family:var(--display);font-weight:700;color:var(--navy);margin-top:6px;font-size:1rem}
+.minc{text-align:center}
+.minc img{display:block;width:100%;max-width:320px;margin:0 auto;border-radius:4px}
+.conv b{font-family:var(--display);font-weight:700;color:var(--navy);font-size:1rem}
+.conv strong{display:block;font-family:var(--display);font-weight:800;color:#F15A24;font-size:clamp(1.15rem,1.7vw,1.55rem);line-height:1.15;margin-top:2px}
+@media (max-width: 1020px){
+  .odsbar{grid-template-columns:1fr;gap:16px;text-align:center}
+  .odsbar>div+div{border-left:0;border-top:1px solid #EADBD0;padding-top:16px}
+  .odsbrand{justify-content:center;text-align:left}
+}
+@media (max-width: 860px){
+  .odsgrid{grid-template-columns:1fr}
+  .ods .curl{display:none}
+}
+
 .road{position:relative;margin-top:24px}
 .road svg{width:100%;height:auto;display:block;overflow:visible}
 .pin{position:absolute;transform:translate(-50%,-100%);background:none;border:0;padding:0;width:clamp(44px,6vw,78px);transition:transform .25s}
@@ -209,6 +253,7 @@ footer{text-align:center;font-size:.75rem;color:var(--muted);padding-block:18px}
 .lleft p{font-size:.78rem;max-width:30ch;margin:6px auto 0}
 .lleft .circ{width:min(270px,75%);aspect-ratio:1;margin:18px auto 0;filter:drop-shadow(0 8px 14px rgba(0,0,0,.14));animation:bob 5s ease-in-out infinite}
 .lleft .circ img{width:100%;height:100%;object-fit:contain}
+.lleft .circ.logo{background:#fff;border-radius:50%;padding:9%;box-shadow:0 10px 24px rgba(0,0,0,.12)}
 .cloud{position:absolute;left:8%;top:38%;width:90px;height:50px;background:#fff;border-radius:40px;z-index:1}
 .cloud::before{content:"";position:absolute;width:50px;height:50px;border-radius:50%;background:#fff;left:22px;top:-24px}
 .lright{position:relative;background:var(--r2);overflow:hidden;display:grid;place-items:center;padding:40px 28px}
@@ -374,6 +419,247 @@ footer{text-align:center;font-size:.75rem;color:var(--muted);padding-block:18px}
 .legend{display:flex;gap:16px;font-size:.7rem;color:#555;margin-top:6px}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
 
+/* ---------- CONTENT PAGES (docentes / familias) ---------- */
+.side a,.side .sl{all:unset;cursor:pointer;display:flex;gap:14px;align-items:center;font-size:.95rem;white-space:nowrap;padding:7px 10px;margin-left:-10px;border-radius:10px;transition:background .15s}
+.side .sl:hover,.side .sl[aria-current="page"]{background:rgba(255,255,255,.18)}
+.side .sl[aria-current="page"]{font-weight:700}
+.side .sl:focus-visible{outline:2px solid #fff}
+.side .sl svg{width:22px;height:22px}
+.page{background:rgba(255,255,255,.55);border-radius:24px;padding:clamp(18px,3vw,34px) clamp(16px,3vw,40px) 40px;min-height:100%;--acc:var(--r2);--acc-soft:color-mix(in srgb,var(--r1) 28%,#fff);--dark:color-mix(in srgb,var(--rside) 55%,#0E2233)}
+.app{--acc:var(--r2);--acc-soft:color-mix(in srgb,var(--r1) 28%,#fff);--dark:color-mix(in srgb,var(--rside) 55%,#0E2233)}
+.ph{display:flex;align-items:center;gap:16px;flex-wrap:wrap;border-bottom:1px solid color-mix(in srgb,var(--rside) 30%,#fff);padding-bottom:10px}
+.ph h1{font-size:clamp(2rem,3.6vw,2.9rem);color:var(--navy);letter-spacing:-.01em;margin-right:auto}
+.ph-tools{display:flex;gap:10px;align-items:center}
+.search{display:flex;align-items:center;gap:10px;background:#fff;border-radius:30px;padding:0 18px;height:46px;width:clamp(200px,26vw,340px);box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.search svg{width:18px;height:18px;stroke:#333;fill:none;stroke-width:2;flex:none}
+.search input{border:0;outline:0;background:none;font:inherit;font-size:.9rem;width:100%;color:var(--ink)}
+.search:focus-within{outline:2px solid var(--acc)}
+.fwrap{position:relative}
+.fbtn{width:46px;height:46px;border-radius:12px;border:0;background:#fff;display:grid;place-items:center;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.fbtn svg{width:22px;height:22px;stroke:#333;fill:none;stroke-width:1.8;stroke-linecap:round}
+.fbtn[aria-expanded="true"],.fbtn.on{background:var(--acc);}
+.fbtn[aria-expanded="true"] svg,.fbtn.on svg{stroke:#fff}
+.fmenu{position:absolute;right:0;top:54px;background:#fff;border-radius:16px;box-shadow:0 14px 30px rgba(0,0,0,.15);padding:8px;display:grid;gap:2px;z-index:20;min-width:180px}
+.fmenu button{all:unset;cursor:pointer;padding:9px 14px;border-radius:10px;font-size:.9rem}
+.fmenu button:hover,.fmenu button:focus-visible{background:var(--acc-soft)}
+.fmenu button[aria-pressed="true"]{font-weight:700;color:var(--acc)}
+.lead{margin:12px 0 22px;color:#2c3a44;font-size:1rem}
+.empty{padding:30px;text-align:center;color:var(--muted)}
+.acts2{display:flex;gap:6px;align-items:center}
+.acts2 button{background:none;border:0;padding:6px;border-radius:8px;display:grid;place-items:center}
+.acts2 button:hover{background:rgba(0,0,0,.06)}
+.acts2 svg{width:21px;height:21px;stroke:#1d2a33;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.acts2 button[aria-pressed="true"] svg{stroke:var(--acc);fill:color-mix(in srgb,var(--acc) 40%,transparent)}
+.acts2 .more{margin-left:auto}
+.pbar{height:12px;border-radius:10px;background:#dfe3e3;overflow:hidden;flex:1}
+.pbar i{display:block;height:100%;background:var(--acc);border-radius:10px;transition:width .5s}
+.rbtn{width:40px;height:40px;border-radius:50%;border:0;background:var(--acc-soft);display:grid;place-items:center;flex:none;transition:transform .15s}
+.rbtn:hover{transform:translateX(2px)}
+.rbtn svg{width:18px;height:18px;stroke:var(--dark);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.pbtn{position:absolute;width:30%;aspect-ratio:1;border-radius:50%;background:#0E2A3A;border:3px solid #fff;display:grid;place-items:center;box-shadow:0 4px 10px rgba(0,0,0,.25);transition:transform .15s}
+.pbtn svg{width:42%;height:42%;fill:#fff;margin-left:8%}
+.pbtn:hover{transform:scale(1.08)}
+/* capacitaciones */
+.caps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,430px),1fr));gap:18px}
+.cap{background:rgba(255,255,255,.85);border-radius:18px;padding:16px;display:grid;grid-template-columns:clamp(120px,32%,210px) 1fr;gap:clamp(14px,2vw,28px);align-items:center}
+.cap .ph2{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1}
+.cap .ph2 img{width:100%;height:100%;object-fit:cover}
+.cap .pbtn{left:5%;bottom:6%}
+.cap h3{font-size:clamp(1.1rem,1.7vw,1.45rem);color:var(--navy)}
+.cap .s{font-size:1rem;color:#333;border-bottom:1px solid #ddd;padding-bottom:8px;margin-bottom:10px}
+.cap .d{font-size:.85rem;color:#444;line-height:1.4}
+.cap .m{display:flex;gap:12px;align-items:center;font-size:.85rem;margin:14px 0 10px;flex-wrap:wrap}
+.cap .m span{display:flex;gap:6px;align-items:center}
+.cap .m svg{width:18px;height:18px;stroke:#1d2a33;fill:none;stroke-width:1.7}
+.cap .m i{width:1px;height:16px;background:#bbb}
+.cap .pr{display:flex;gap:14px;align-items:center;font-size:.85rem}
+.level{margin-top:22px;background:rgba(255,255,255,.85);border-radius:18px;padding:18px 26px;display:grid;grid-template-columns:1fr 1.4fr;gap:24px;align-items:center}
+.level h3{font-size:1.4rem;color:var(--navy)}
+.level p{font-size:.85rem;color:#444}
+.level .top{display:flex;justify-content:space-between;font-weight:700;font-size:.9rem;margin-bottom:8px}
+.segbar{height:28px;border-radius:20px;background:color-mix(in srgb,var(--rside) 55%,#fff);position:relative;overflow:hidden}
+.segbar i{position:absolute;inset:0 auto 0 0;background:var(--dark);border-radius:20px;transition:width .6s}
+.segbar b{position:absolute;top:4px;bottom:4px;width:2px;background:rgba(255,255,255,.85)}
+/* lecturas */
+.books{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.bk{background:rgba(255,255,255,.88);border-radius:18px;padding:16px 16px 10px;display:flex;flex-direction:column}
+.cover{all:unset;cursor:pointer;display:flex;flex-direction:column;aspect-ratio:3/3.9;border-radius:6px;padding:16px 14px 12px;position:relative;overflow:hidden;box-shadow:0 6px 14px rgba(0,0,0,.12);transition:transform .2s;text-align:center}
+.cover:hover{transform:translateY(-3px)}
+.cover:focus-visible{outline:3px solid var(--acc)}
+.cover .t1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.25rem,1.8vw,1.6rem);line-height:1;color:#1d2a33;position:relative}
+.cover .t2{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:clamp(1.35rem,2vw,1.8rem);line-height:1;position:relative}
+.cover .sub{font-size:.62rem;font-weight:600;margin-top:6px;color:#333;position:relative}
+.cover svg{width:78%;margin:auto auto 6px;position:relative}
+.cover .au{font-family:Georgia,serif;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:#1d2a33;position:relative}
+.bk h3{font-size:1.08rem;margin-top:14px;color:var(--navy)}
+.bk .au2{font-size:.88rem;color:#444;border-bottom:1px solid #ddd;padding-bottom:8px}
+.bk .d{font-size:.85rem;color:#444;margin:8px 0 10px;flex:1}
+/* audios */
+.hero2{position:relative;border-radius:18px;overflow:hidden;background:#1d1230;color:#fff;min-height:240px;display:grid;align-items:center}
+.hero2 img{position:absolute;right:0;top:0;height:100%;width:62%;object-fit:cover}
+.hero2::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#1d1230 38%,rgba(29,18,48,.75) 52%,rgba(29,18,48,0) 75%);z-index:1}
+.hero2 .in{position:relative;z-index:2;padding:26px 32px;max-width:540px}
+.hero2 .tag{display:inline-block;background:rgba(255,255,255,.18);border-radius:20px;padding:5px 14px;font-size:.72rem;font-weight:700;letter-spacing:.05em}
+.hero2 h2{color:#fff;font-size:clamp(1.7rem,3vw,2.5rem);margin:10px 0 6px}
+.hero2 p{font-size:.95rem;opacity:.92}
+.hero2 .go2{display:inline-flex;gap:10px;align-items:center;margin-top:16px;background:#fff;color:var(--navy);border:0;border-radius:30px;padding:10px 22px;font-family:var(--display);font-weight:700}
+.hero2 .go2 b{width:24px;height:24px;border-radius:50%;background:var(--navy);display:grid;place-items:center}
+.hero2 .go2 svg{width:11px;height:11px;fill:#fff;margin-left:2px}
+.dots{position:absolute;right:22px;bottom:16px;display:flex;gap:8px;z-index:2}
+.dots button{width:12px;height:12px;border-radius:50%;border:2px solid #fff;background:none;padding:0}
+.dots button[aria-pressed="true"]{background:#fff}
+.eph{display:flex;justify-content:space-between;align-items:center;margin:22px 0 12px}
+.eph h2{font-size:1.3rem;color:var(--navy);margin:0}
+.eph button{background:none;border:0;font-weight:600;color:var(--navy);display:flex;gap:6px;align-items:center}
+.eph svg{width:18px;height:18px;stroke:var(--navy);fill:none;stroke-width:2}
+.eps{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.ep{background:rgba(255,255,255,.9);border-radius:16px;padding:10px 10px 8px;display:flex;flex-direction:column}
+.ep .th{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:2/1}
+.ep .th img{width:100%;height:100%;object-fit:cover}
+.ep .th span{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.65);color:#fff;font-size:.72rem;font-weight:700;border-radius:8px;padding:2px 8px}
+.ep h3{font-size:1rem;color:var(--navy);margin:12px 4px 2px}
+.ep .se{font-size:.8rem;color:#555;margin:0 4px}
+.ep .d{font-size:.83rem;color:#333;margin:6px 4px 10px;flex:1}
+.player{display:flex;gap:12px;align-items:center;margin:0 4px 6px}
+.player .pl{width:40px;height:40px;border-radius:50%;border:0;background:#0E2A3A;display:grid;place-items:center;flex:none}
+.player .pl svg{width:15px;height:15px;fill:#fff}
+.player .pbar{height:7px}
+.player time{font-size:.72rem;color:#555;min-width:72px;text-align:right}
+.ep .acts2{justify-content:space-around;border-top:1px solid #eee;padding-top:4px}
+/* películas */
+.movies{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:16px}
+.mv{background:rgba(255,255,255,.9);border-radius:18px;padding:14px;display:grid;grid-template-columns:clamp(130px,38%,240px) 1fr;gap:clamp(14px,2vw,26px)}
+.poster{all:unset;cursor:pointer;position:relative;border-radius:10px;overflow:hidden;aspect-ratio:4/4.4;display:flex;flex-direction:column;justify-content:flex-start;padding:16px;color:#fff;text-align:center;box-shadow:0 6px 14px rgba(0,0,0,.15)}
+.poster:focus-visible{outline:3px solid var(--acc)}
+.poster .pt{font-family:var(--display);font-weight:800;font-size:clamp(1rem,1.5vw,1.45rem);overflow-wrap:anywhere;line-height:1;text-shadow:0 2px 8px rgba(0,0,0,.3);position:relative;z-index:1}
+.poster svg.art{position:absolute;inset:auto 0 0 0;width:100%;height:70%}
+.poster .pbtn{left:7%;bottom:7%;width:24%;z-index:1}
+.mv h3{font-size:clamp(1.15rem,1.8vw,1.5rem);color:var(--navy);margin-top:6px}
+.mv .mt{display:flex;gap:10px;font-size:.9rem;color:#333;margin:8px 0;padding-bottom:10px;border-bottom:1px solid #ddd;flex-wrap:wrap}
+.mv .mt i{width:1px;background:#999}
+.mv .d{font-size:.9rem;color:#333;line-height:1.45}
+.mv .acts2{margin-top:12px}
+/* foro */
+.forum{display:grid;grid-template-columns:1fr minmax(260px,340px);gap:18px;align-items:start}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.chips button{background:rgba(255,255,255,.9);border:0;border-radius:10px;padding:9px 18px;font-size:.85rem;color:#1d2a33;transition:background .15s}
+.chips button:hover{background:#fff}
+.chips button[aria-pressed="true"]{background:color-mix(in srgb,var(--r1) 70%,#fff);color:#fff;font-weight:600}
+.posts{display:grid;gap:12px}
+.post{background:rgba(255,255,255,.92);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:40px 52px 1fr auto;gap:12px;align-items:start}
+.vote{display:grid;justify-items:center;gap:2px;font-weight:700;font-size:.95rem}
+.vote button{background:none;border:0;padding:2px;border-radius:6px}
+.vote svg{width:22px;height:22px;stroke:#1d2a33;fill:none;stroke-width:1.8;stroke-linejoin:round}
+.vote button[aria-pressed="true"] svg{stroke:var(--acc);fill:var(--acc-soft)}
+.avatar{width:52px;height:52px;border-radius:50%;object-fit:cover;background:var(--acc-soft);display:grid;place-items:center;font-weight:700;color:var(--dark)}
+.post .who{font-size:.82rem;color:#555;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.post .who b{color:#1d2a33}
+.role{border-radius:20px;padding:2px 10px;font-size:.75rem;font-weight:600}
+.role.Docente{background:#d9eefc;color:#1c5f8a}.role.Familia{background:#dcf3e2;color:#2d7a47}.role.Estudiante{background:#e2f6ec;color:#2b8a5f}
+.post h3{font-size:1.05rem;color:var(--navy);margin:4px 0}
+.post p{font-size:.88rem;color:#333}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.tags span{background:#eef1f1;border-radius:6px;padding:3px 10px;font-size:.75rem}
+.post .side2{display:flex;gap:8px;align-items:center}
+.post .side2 button{background:none;border:0;display:flex;gap:5px;align-items:center;font-size:.85rem;padding:4px;border-radius:6px}
+.post .side2 button:hover{background:rgba(0,0,0,.06)}
+.post .side2 svg{width:19px;height:19px;stroke:#1d2a33;fill:none;stroke-width:1.7}
+.aside{display:grid;gap:16px}
+.box{background:rgba(255,255,255,.92);border-radius:16px;padding:18px 20px}
+.box h3{display:flex;gap:12px;align-items:center;font-size:1rem;color:var(--navy);margin-bottom:10px}
+.box h3 svg{width:26px;height:26px;stroke:var(--acc);fill:none;stroke-width:1.6}
+.box p{font-size:.88rem;color:#333}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);margin-top:14px}
+.nums div{padding:0 10px;border-left:1px solid #ddd}.nums div:first-child{border:0;padding-left:0}
+.nums b{display:block;font-size:1.2rem;color:var(--navy)}
+.nums small{font-size:.75rem;color:#555}
+.nums .live{display:inline-block;width:10px;height:10px;border-radius:50%;background:#3DBE8B;margin-left:6px}
+.pop{list-style:none;padding:0;margin:0}
+.pop li button{all:unset;cursor:pointer;display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center;width:100%;padding:8px 0;border-bottom:1px solid #eee;font-size:.88rem}
+.pop li:last-child button{border:0}
+.pop li button:hover{color:var(--acc)}
+.pop i{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff;font-style:normal;font-weight:700;font-size:.8rem}
+.ask{background:color-mix(in srgb,var(--r1) 22%,#fff);display:grid;grid-template-columns:30px 1fr 44px;gap:12px;align-items:center}
+.ask svg.b{width:28px;height:28px;stroke:var(--dark);fill:none;stroke-width:1.6}
+.ask b{display:block;color:var(--navy)}
+.ask p{font-size:.82rem}
+.ask .rbtn{background:#fff}
+.newbtn{display:flex;gap:10px;align-items:center;white-space:nowrap;background:var(--acc);color:#fff;border:0;border-radius:30px;padding:0 24px;height:46px;font-family:var(--display);font-weight:700}
+.newbtn svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round}
+.mform{display:grid;gap:10px;margin-top:12px}
+.mform input,.mform textarea,.mform select{font:inherit;padding:10px 14px;border:1px solid #ccc;border-radius:10px}
+.mform textarea{min-height:110px;resize:vertical}
+.chat{display:grid;gap:8px;max-height:260px;overflow:auto;margin:10px 0;padding:4px}
+.chat p{padding:9px 14px;border-radius:14px;max-width:85%;font-size:.9rem}
+.chat .bot{background:#eef1f1}
+.chat .me{background:var(--r2);color:#fff;justify-self:end}
+.evs{display:grid;gap:8px;margin-top:8px}
+.evs div{display:grid;grid-template-columns:54px 1fr;gap:12px;align-items:center;background:#f4f5f5;border-radius:12px;padding:10px}
+.evs b{background:var(--r2);color:#fff;border-radius:10px;text-align:center;padding:6px 0;font-size:.8rem;line-height:1.1}
+@media (max-width: 860px){
+  .forum,.level{grid-template-columns:1fr}
+  .side .sl{white-space:nowrap}
+}
+@media (max-width: 520px){
+  .cap,.mv{grid-template-columns:1fr}
+  .cap .ph2,.mv .poster{max-width:240px}
+  .post{grid-template-columns:34px 1fr;}
+  .post .avatar{display:none}
+  .post .side2{grid-column:2}
+  .ph-tools{width:100%;flex-wrap:wrap}
+  .search{width:auto;flex:1 1 200px}
+  .books{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .bk{padding:10px 10px 6px}
+  .bk .acts2 button{padding:3px}
+  .newbtn{flex:1 1 100%;justify-content:center}
+}
+
+/* rutas (familias) */
+.pros{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+.pro{background:rgba(255,255,255,.92);border-radius:18px;padding:22px 18px 18px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .2s, box-shadow .2s}
+.pro::before{content:"";position:absolute;inset:0 0 auto 0;height:62px;background:var(--bg);opacity:.75}
+.pro>*{position:relative}
+.pro:hover{transform:translateY(-4px);box-shadow:0 14px 26px rgba(0,0,0,.08)}
+.pav{width:76px;height:76px;border-radius:50%;background:#fff;border:3px solid var(--bg);display:grid;place-items:center;box-shadow:0 6px 14px rgba(0,0,0,.08)}
+.pav svg{width:36px;height:36px;fill:none;stroke:var(--dark);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pro h3{font-size:1.08rem;color:var(--navy);margin-top:14px}
+.pro .prole{font-weight:700;color:var(--acc);font-size:.88rem}
+.pro .d{font-size:.84rem;color:#333;margin:8px 0;flex:1}
+.pro .hrs{display:flex;gap:6px;align-items:center;font-size:.76rem;color:#555;margin-top:10px}
+.pro .hrs svg{width:16px;height:16px;fill:none;stroke:#555;stroke-width:1.5;flex:none}
+.pbtns{display:grid;gap:8px;margin-top:14px}
+.pbtns .newbtn{height:38px;padding:0 16px;font-size:.85rem;justify-content:center}
+.ghost{height:38px;padding:0 16px;border-radius:30px;border:1.5px solid var(--acc);background:none;color:var(--acc);font-family:var(--display);font-weight:700;font-size:.85rem}
+.ghost:hover{background:var(--acc-soft)}
+.rts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:18px}
+.rt{background:rgba(255,255,255,.92);border-radius:18px;padding:22px}
+.rt header{display:flex;gap:14px;align-items:flex-start}
+.rti{width:48px;height:48px;border-radius:14px;background:var(--acc-soft);display:grid;place-items:center;flex:none}
+.rti svg{width:26px;height:26px;fill:none;stroke:var(--dark);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.rt h3{font-size:1.15rem;color:var(--navy)}
+.rt header p{font-size:.86rem;color:#444;margin-top:4px}
+.rtp{display:flex;gap:12px;align-items:center;margin:16px 0 6px;font-size:.8rem}
+.rtp .pbar{height:8px}
+.steps2{list-style:none;padding:0;margin:0;counter-reset:s}
+.steps2 li{counter-increment:s;position:relative;padding-left:44px}
+.steps2 li::before{content:counter(s);position:absolute;left:0;top:10px;width:30px;height:30px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.85rem}
+.steps2 li:not(:last-child)::after{content:"";position:absolute;left:14px;top:42px;bottom:-8px;width:2px;background:var(--acc-soft)}
+.steps2 label{display:flex;gap:10px;align-items:flex-start;padding:10px 8px;border-radius:12px;cursor:pointer}
+.steps2 label:hover{background:rgba(0,0,0,.03)}
+.steps2 input{width:18px;height:18px;margin-top:3px;accent-color:var(--acc);flex:none}
+.steps2 b{display:block;font-size:.92rem;color:var(--navy)}
+.steps2 small{font-size:.82rem;color:#444}
+.steps2 input:checked+span b{text-decoration:line-through;opacity:.6}
+.lines{margin-top:14px;border-top:1px solid #eee;padding-top:14px;display:grid;gap:8px}
+.lines h4{font-family:var(--display);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
+.line{display:flex;gap:12px;align-items:center;background:var(--acc-soft);border-radius:14px;padding:10px 14px;color:inherit;text-decoration:none;transition:transform .15s}
+.line:hover{transform:translateX(3px)}
+.line svg,.sos svg{width:22px;height:22px;fill:none;stroke:var(--dark);stroke-width:1.8;flex:none}
+.line b{display:block;font-family:var(--display);font-size:1.1rem;color:var(--navy)}
+.line em{font-style:normal;font-size:.8rem;font-weight:600;color:var(--acc)}
+.line small{font-size:.8rem;color:#333}
+.sos{display:flex;gap:12px;align-items:center;margin-top:18px;background:#fff;border-left:5px solid var(--acc);border-radius:12px;padding:14px 18px;font-size:.92rem}
+
 /* ---------- MODAL / TOAST ---------- */
 .modal{position:fixed;inset:0;background:rgba(14,34,51,.45);display:grid;place-items:center;z-index:90;padding:20px}
 .mbox{background:#fff;border-radius:28px;max-width:520px;width:100%;padding:28px;position:relative;max-height:85vh;overflow:auto}
@@ -491,22 +777,49 @@ const I = {
   smile:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5a4.5 4.5 0 0 0 7 0"/><path d="M9 9.6v.8M15 9.6v.8" stroke-linecap="round"/></svg>',
   house:'<svg viewBox="0 0 24 24"><path d="M3.5 11L12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/></svg>',
   openbook:'<svg viewBox="0 0 24 24"><path d="M3 5.5c3-1 6-.6 9 1.5v12c-3-2-6-2.5-9-1.5zM21 5.5c-3-1-6-.6-9 1.5v12c3-2 6-2.5 9-1.5z"/></svg>',
+  backpack:'<svg viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0v11H6z"/><path d="M9.5 5.2V4a2.5 2.5 0 0 1 5 0v1.2"/><path d="M9 13h6v4H9z"/></svg>',
+  school:'<svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M10 21v-5h4v5"/><circle cx="12" cy="10.5" r="1.6"/></svg>',
+  teacher:'<svg viewBox="0 0 24 24"><path d="M9 4h12v10H13"/><circle cx="6" cy="8" r="2.5"/><path d="M2.5 20v-4.5A3.5 3.5 0 0 1 6 12h3l4-2"/><path d="M15 8l2 2 3-3"/></svg>',
+  family:'<svg viewBox="0 0 24 24"><circle cx="7.5" cy="6" r="2.5"/><circle cx="16.5" cy="6" r="2.5"/><circle cx="12" cy="13" r="1.8"/><path d="M3.5 20v-5a4 4 0 0 1 8 0M12.5 15a4 4 0 0 1 8 0v5M9.5 20v-2a2.5 2.5 0 0 1 5 0v2"/></svg>',
+  route:'<svg viewBox="0 0 24 24"><circle cx="6" cy="19" r="2.2"/><circle cx="18" cy="5" r="2.2"/><path d="M8 19h7.5a3.5 3.5 0 0 0 0-7h-7a3.5 3.5 0 0 1 0-7H16"/></svg>',
+  steth:'<svg viewBox="0 0 24 24"><path d="M5 3v6a5 5 0 0 0 10 0V3"/><path d="M10 14v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="12" r="2"/></svg>',
+  brain:'<svg viewBox="0 0 24 24"><path d="M12 5a3 3 0 0 0-5.6-1.4A3 3 0 0 0 4 8a3 3 0 0 0 0 5 3.5 3.5 0 0 0 4 5 3 3 0 0 0 4 1.5zM12 5a3 3 0 0 1 5.6-1.4A3 3 0 0 1 20 8a3 3 0 0 1 0 5 3.5 3.5 0 0 1-4 5 3 3 0 0 1-4 1.5z"/><path d="M12 5v14.5"/></svg>',
+  apple:'<svg viewBox="0 0 24 24"><path d="M12 7c-2-1.5-7-1.5-7 4.5S8.5 21 10.5 21c.8 0 1-.4 1.5-.4s.7.4 1.5.4c2 0 5.5-3.5 5.5-9.5S14 5.5 12 7z"/><path d="M12 7c0-2 1-3.5 3-4"/></svg>',
+  puzzle:'<svg viewBox="0 0 24 24"><path d="M4 8h4a2 2 0 1 1 4 0h4v4a2 2 0 1 1 0 4v4h-4a2 2 0 1 0-4 0H4v-4a2 2 0 1 0 0-4z"/></svg>',
+  chat:'<svg viewBox="0 0 24 24"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M9 10.5h.01M12 10.5h.01M15 10.5h.01" stroke-width="2.4"/></svg>',
+  phone:'<svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>',
   chev:'<svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>',
+  music:'<svg viewBox="0 0 24 24"><path d="M6.5 16A4.5 4.5 0 0 1 6 7.1a6 6 0 0 1 11.6 1.4A3.8 3.8 0 0 1 18 16"/><path d="M11 13.5v6M11 13.5l4-1v5.5"/><circle cx="9.6" cy="19.6" r="1.4"/><circle cx="13.6" cy="18" r="1.4"/></svg>',
+  playc:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l5.5-3.5z"/></svg>',
+  people:'<svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.6"/><path d="M3 20.5c0-4 2.7-6.5 6-6.5s6 2.5 6 6.5z"/><path d="M13.6 4.9A3.6 3.6 0 1 1 15 11.5M16.5 14.3c2.6.5 4.5 2.8 4.5 6.2h-3"/></svg>',
+  search:'<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg>',
+  sliders:'<svg viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h3M11 12h9M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>',
+  video:'<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M10 9v6l5-3z"/></svg>',
+  chevR:'<svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>',
+  arrowR:'<svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg>',
+  dots:'<svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="12" cy="19" r="1.3"/></svg>',
+  download:'<svg viewBox="0 0 24 24"><path d="M12 4v11M7 10.5l5 5 5-5M4 19.5h16"/></svg>',
+  up:'<svg viewBox="0 0 24 24"><path d="M12 3l8 9h-4.5v8h-7v-8H4z"/></svg>',
+  down:'<svg viewBox="0 0 24 24"><path d="M12 21l8-9h-4.5V4h-7v8H4z"/></svg>',
+  comment:'<svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>',
+  trend:'<svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg>',
+  plus:'<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>',
+  pause:'<svg viewBox="0 0 24 24"><path d="M7 4h3.5v16H7zM13.5 4H17v16h-3.5z"/></svg>',
   plane:'<svg viewBox="0 0 60 40"><path d="M2 18L58 2 40 38 28 26z"/><path d="M28 26L58 2 22 22z" fill="#c9d0f5"/></svg>',
 };
 
 /* ---------- data ---------- */
 const ROLES = {
-  instituciones:{t:'t-ins', label:'Instituciones', img:'assets/capi-instituciones.png', msg:'Aquí encontrarás un plan de formación y acompañamiento educativo e inclusivo.', home:'colegio', user:'María'},
-  docentes:{t:'t-doc', label:'Docentes', img:'assets/capi-docentes.png', msg:'Aquí encontrarás un plan de formación y acompañamiento educativo e inclusivo.', home:'alberto', user:'Mr. Alberto'},
-  familias:{t:'t-fam', label:'Familias', img:'assets/capi-familias.png', msg:'Aquí encontrarás un plan de formación y acompañamiento educativo e inclusivo.', home:'maria', user:'María'},
+  instituciones:{t:'t-ins', label:'Instituciones', img:'assets/logo-tereto.png', logo:true, msg:'Aquí encontrarás un plan de formación y acompañamiento educativo e inclusivo.', home:'colegio', user:'María'},
+  docentes:{t:'t-doc', label:'Docentes', img:'assets/logo-tereto.png', logo:true, msg:'Aquí encontrarás un plan de formación y acompañamiento educativo e inclusivo.', home:'alberto', user:'Mr. Alberto'},
+  familias:{t:'t-fam', label:'Familias', img:'assets/logo-tereto.png', logo:true, msg:'Aquí encontrarás un plan de formación y acompañamiento educativo e inclusivo.', home:'maria', user:'María'},
   estudiantes:{t:'t-est', label:'Estudiantes', img:'assets/capi-estudiantes.png', msg:'Aquí encontrarás actividades muy divertidas que te ayudarán a relacionarte con otros.', home:'adan', user:'Adán'},
 };
 const ENTER = [
-  ['estudiantes','smile','Estudiante','Juegos y actividades'],
-  ['instituciones','house','Institución','Indicadores y reportes'],
-  ['docentes','openbook','Profesor','Seguimiento del aula'],
-  ['familias','users','Acudiente o cuidador','Avances de tu familia'],
+  ['estudiantes','backpack','Estudiante','Juegos y actividades'],
+  ['instituciones','school','Institución','Indicadores y reportes'],
+  ['docentes','teacher','Docente','Seguimiento del aula'],
+  ['familias','family','Acudiente o cuidador','Avances de tu familia'],
 ];
 const APP_ROLE = {adan:'estudiantes', reto:'estudiantes', insignia:'estudiantes', alberto:'docentes', maria:'familias', colegio:'instituciones'};
 
@@ -542,9 +855,12 @@ let S = {
   courses: store.get('courses',[['3A',100],['3B',100],['4A',20],['5B',40]]),
   train: store.get('train',{}),
   toolsOn: store.get('toolsOn',{}),
-  step:0, picked:null, answered:false, insSeg:'docentes'
+  route: store.get('route',{}),
+  saved: store.get('saved',{}), liked: store.get('liked',{}), audio: store.get('audio',{}),
+  posts: store.get('posts',[]), votes: store.get('votes',{}), cmts: store.get('cmts',{}),
+  step:0, picked:null, answered:false, insSeg:'docentes', filter:'all', cat:'Todos', feat:0
 };
-const save = () => {store.set('done',S.done);store.set('courses',S.courses);store.set('train',S.train);store.set('toolsOn',S.toolsOn)};
+const save = () => {store.set('done',S.done);store.set('courses',S.courses);store.set('train',S.train);store.set('toolsOn',S.toolsOn);['route','saved','liked','audio','posts','votes','cmts'].forEach(k=>store.set(k,S[k]))};
 
 /* ---------- helpers ---------- */
 const $ = (s,el=document)=>el.querySelector(s);
@@ -581,7 +897,7 @@ function renderNav(route){
                  : `<button class="link-btn" id="signupBtn">Registrarse</button>
                     <div class="enter"><button class="pill" id="enterBtn" aria-haspopup="true" aria-expanded="false" aria-controls="enterMenu"><span class="av">${I.user}</span>Iniciar<span class="chev">${I.chev}</span></button>
                     <div class="enter-menu" id="enterMenu" hidden>
-                      ${ENTER.map(([r,ic,t,s])=>`<button data-go="${r}"><span class="ic"><img src="assets/mini-${r}.png" alt=""></span><span><b>${t}</b><small>${s}</small></span></button>`).join('')}
+                      ${ENTER.map(([r,ic,t,s])=>`<button data-go="${r}"><span class="ic">${I[ic]}</span><span><b>${t}</b><small>${s}</small></span></button>`).join('')}
                       <p class="enter-foot">¿No tienes cuenta? <button class="link-btn" id="signupBtn2">Registrarse</button></p>
                     </div></div>`;
   }
@@ -603,6 +919,7 @@ function renderNav(route){
 $('#menuToggle').onclick=()=>{const n=$('#nav');n.classList.toggle('open');$('#menuToggle').setAttribute('aria-expanded',n.classList.contains('open'))};
 document.addEventListener('click',e=>{
   const em=$('#enterMenu'); if(em&&!em.hidden&&!e.target.closest('.enter')){em.hidden=true;$('#enterBtn').setAttribute('aria-expanded','false')}
+  const pa=e.target.closest('[data-plat]'); if(pa){platAction(APP_ROLE[(location.hash||'#').slice(1).split('/')[0]],pa.dataset.plat);return}
   const g=e.target.closest('[data-go]'); if(!g) return;
   const r=g.dataset.go;
   if(r==='retos'){go('adan');setTimeout(()=>$('#map')?.scrollIntoView({behavior:'smooth',block:'center'}),60);return}
@@ -610,6 +927,11 @@ document.addEventListener('click',e=>{
   go(r);
 });
 
+const SDG_COLORS=['#E5243B','#DDA63A','#4C9F38','#C5192D','#FF3A21','#26BDE2','#FCC30B','#A21942','#FD6925','#DD1367','#FD9D24','#BF8B2E','#3F7E44','#0A97D9','#56C02B','#00689D','#19486A'];
+function odsWheel(){
+  const C=2*Math.PI*38, seg=C/17;
+  return `<svg viewBox="0 0 100 100" aria-hidden="true"><g transform="rotate(-90 50 50)">${SDG_COLORS.map((c,i)=>`<circle cx="50" cy="50" r="38" fill="none" stroke="${c}" stroke-width="16" stroke-dasharray="${seg-1.6} ${C-seg+1.6}" stroke-dashoffset="${-i*seg}"/>`).join('')}</g></svg>`;
+}
 /* ---------- LANDING ---------- */
 function landing(){
   view.innerHTML = `
@@ -683,6 +1005,41 @@ function landing(){
     </div>
   </div></section>
 
+  <section class="ods" id="ods" aria-labelledby="odsT">
+    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+    <svg class="curl" viewBox="0 0 160 110" aria-hidden="true"><path d="M150 100 C 60 110 10 60 40 20" fill="none" stroke="#F15A24" stroke-width="3" stroke-linecap="round"/><path d="M18 46 l10-22 M28 66 l20-14" stroke="#FBB03B" stroke-width="6" stroke-linecap="round"/></svg>
+    <div class="wrap">
+      <span class="eyebrow">Nuestro compromiso</span>
+      <h2 id="odsT">Impacto alineado con los <span>ODS</span></h2>
+      <p class="intro">Nuestro compromiso es ofrecer información académica actualizada y de calidad, compartir las últimas tendencias, respaldar los estudios con datos y aportar los indicadores que cada institución necesita para tener una hoja de ruta clara, con metas y sentido de comunidad.</p>
+      <div class="odsgrid">
+        <article class="odscard" style="--c:#C5192D;--soft:#F8C9CE">
+          <div class="sdg" role="img" aria-label="ODS 4: Educación de calidad"><div class="top"><span class="n">4</span><span class="l">Educación de calidad</span></div>
+            <svg viewBox="0 0 60 44"><path d="M4 8c8-3 17-2 24 3v29c-7-5-16-6-24-3zM52 8c-6-3-12-3-17 0v29c5-3 11-3 17 0z"/><path d="M56 6v30l-2 5-2-5V6z"/></svg></div>
+          <h3>Educación de calidad</h3>
+          <p>Docentes formados y niños con progreso registrado en cada actividad.</p>
+        </article>
+        <article class="odscard" style="--c:#DD1367;--soft:#FBD0E2">
+          <div class="sdg" role="img" aria-label="ODS 10: Reducción de las desigualdades"><div class="top"><span class="n">10</span><span class="l">Reducción de las desigualdades</span></div>
+            <svg viewBox="0 0 60 50"><path d="M30 2l8 9H22zM30 48l8-9H22zM2 25l9-8v16zM58 25l-9-8v16z" fill="#fff" stroke="none"/><path d="M20 19h20M20 25h20M20 31h20" stroke-width="4"/></svg></div>
+          <h3>Reducción de las desigualdades</h3>
+          <p>Herramientas especializadas para familias y colegios que hoy no las tienen, y datos propios sobre autismo en el Atlántico.</p>
+        </article>
+        <article class="odscard" style="--c:#19486A;--soft:#BFEADB">
+          <div class="sdg" role="img" aria-label="ODS 17: Alianzas para lograr los objetivos"><div class="top"><span class="n">17</span><span class="l">Alianzas para lograr los objetivos</span></div>
+            <svg viewBox="0 0 60 60"><circle cx="30" cy="18" r="12"/><circle cx="18" cy="27" r="12"/><circle cx="42" cy="27" r="12"/><circle cx="23" cy="40" r="12"/><circle cx="37" cy="40" r="12"/></svg></div>
+          <h3>Alianzas</h3>
+          <p>Respaldo de Minciencias, instituciones educativas y aliados académicos.</p>
+        </article>
+      </div>
+      <div class="odsbar">
+        <div class="odsbrand">${odsWheel()}<div><div class="w">OBJETIVOS<small>DE DESARROLLO<br>SOSTENIBLE</small></div><p>Alineados con los ODS 4, 10 y 17.</p></div></div>
+        <div class="minc"><img src="assets/minciencias.png" alt="Minciencias: El conocimiento es de todos"></div>
+        <div class="conv"><b>Proyecto elegible de la convocatoria</b><strong>Minciencias 970 de 2025.</strong></div>
+      </div>
+    </div>
+  </section>
+
   <section class="contact" id="contacto">
     <div class="shape"></div>
     <div class="wrap">
@@ -737,7 +1094,7 @@ function landing(){
 function login(role){
   const R=ROLES[role];
   view.innerHTML=`<section class="login"><div class="wrap"><div class="lcard">
-    <div class="lleft"><h2>¡Hola, Bienvenido!</h2><p>${R.msg}</p><span class="cloud"></span><div class="circ"><img src="${R.img}" alt=""></div></div>
+    <div class="lleft"><h2>¡Hola, Bienvenido!</h2><p>${R.msg}</p><span class="cloud"></span><div class="circ${R.logo?' logo':''}"><img src="${R.img}" alt="${R.logo?'Te Reto':''}"></div></div>
     <div class="lright"><form id="lform" novalidate>
       <h3>INICIO DE SESIÓN</h3>
       <div class="lrow">${I.user}<input id="lu" placeholder="Username" autocomplete="username" aria-label="Usuario"></div>
@@ -764,7 +1121,7 @@ function signup(role){
 function chooseSignup(){
   const m=modal(`<h3>Registrarse</h3><p style="color:var(--muted);font-size:.9rem;margin-bottom:10px">¿Cómo vas a usar Te Reto?</p>
     <div class="enter-menu pick">
-    ${ENTER.map(([r,ic,t,s])=>`<button data-role="${r}"><span class="ic"><img src="assets/mini-${r}.png" alt=""></span><span><b>${t}</b><small>${s}</small></span></button>`).join('')}</div>`);
+    ${ENTER.map(([r,ic,t,s])=>`<button data-role="${r}"><span class="ic">${I[ic]}</span><span><b>${t}</b><small>${s}</small></span></button>`).join('')}</div>`);
   m.querySelectorAll('[data-role]').forEach(b=>b.onclick=()=>{m.remove();signup(b.dataset.role)});
 }
 
@@ -884,7 +1241,7 @@ function bindTools(){
 
 function teacher(){
   const c=S.courses;
-  view.innerHTML=`<div class="dash">${side([['folder','Mis cursos'],['board','Capacitaciones'],['doc','Lecturas'],['envelope','Información'],['headset','Chatbot']],[['plusbox','Nuevo Contenido'],['cal','Calendario'],['heart','Notificaciones']])}
+  view.innerHTML=`<div class="dash">${sideNav('docentes','')}
   <div class="main"><div class="panel">
     <section class="hi"><h1>Hola, Alberto</h1><span>Qué bueno tenerte de vuelta</span></section>
     <section id="sec-cursos"><h2>Progreso por grupo</h2><div class="courses" id="courses">
@@ -897,7 +1254,7 @@ function teacher(){
       ${trainCard('doc2','assets/docente-2.jpg','Barreras para el aprendizaje','La participación en mi aula','Al finalizar la microcapacitación, el docente estará en capacidad de diferenciar las estrategias de Diseño Universal para el Aprendizaje de los ajustes razonables.','1.5 horas')}
     </div></section>
   </div></div></div>`;
-  bindSide({'Mis cursos':'#sec-cursos','Capacitaciones':'#sec-cap'}); bindTrain();
+  bindTrain();
   $('#courses').addEventListener('click',e=>{const b=e.target.closest('[data-c]');if(!b)return;const [g,p]=S.courses[+b.dataset.c];
     modal(`<h3>Grupo ${g}</h3><p>Avance del plan de inclusión: <b>${p}%</b></p><p style="color:var(--muted);font-size:.9rem;margin-top:6px">${p>=100?'Todas las actividades del periodo están registradas.':'Faltan '+Math.round((100-p)/20)+' actividades por registrar este periodo.'}</p>
       ${p<100?'<button class="btn btn-solid" id="adv" style="margin-top:16px;font-size:.9rem;padding:8px 20px">Registrar actividad (+20%)</button>':''}`);
@@ -906,7 +1263,7 @@ function teacher(){
     $('#nf').onsubmit=e=>{e.preventDefault();const v=$('#ng').value.trim().toUpperCase();if(!v){$('#ng').focus();return}S.courses.push([v,0]);save();teacher();toast('Grupo '+v+' creado')}};
 }
 function family(){
-  view.innerHTML=`<div class="dash">${side([['board','Capacitaciones'],['doc','Lecturas'],['envelope','Información'],['headset','Chatbot']],[['plusbox','Guardados'],['cal','Calendario'],['heart','Notificaciones']])}
+  view.innerHTML=`<div class="dash">${sideNav('familias','')}
   <div class="main"><div class="panel">
     <section class="hi"><h1>Hola, María</h1><span>Qué bueno tenerte de vuelta</span></section>
     <section id="sec-cap"><h2>Capacitaciones</h2><div class="trains">
@@ -917,7 +1274,7 @@ function family(){
       ${toolsHtml([['Material didáctico','Texturas y emociones'],['Libros','Cuentos para dormir'],['Audios','Podcast - TDA'],['Entrevistas','Somos comunidad'],['Foros','Comparte tu historia']],'fam')}
     </section>
   </div></div></div>`;
-  bindSide({'Capacitaciones':'#sec-cap','Guardados':'#sec-tools','Lecturas':'#sec-tools'}); bindTrain(); bindTools();
+  bindTrain(); bindTools();
 }
 const SERIES={
   docentes:{a:[52,58,66,62,55,48,50,58,64,60,52,46],b:[40,46,44,38,52,82,60,36,48,70,58,50]},
@@ -957,20 +1314,317 @@ function institution(){
   document.querySelectorAll('[data-seg]').forEach(b=>b.onclick=()=>{S.insSeg=b.dataset.seg;document.querySelectorAll('[data-seg]').forEach(x=>x.setAttribute('aria-pressed',x===b));$('#chartBox').innerHTML=chartSvg(S.insSeg)});
 }
 
+/* ---------- CONTENT PAGES (docentes / familias) ---------- */
+const PAGES = {
+  capacitaciones:{t:'Capacitaciones', ph:'Buscar capacitaciones…', lead:'Formación práctica para fortalecer tus conocimientos y herramientas en inclusión, neurodiversidad y educación.'},
+  lecturas:{t:'Lecturas', ph:'Buscar lecturas…', lead:'Libros y guías para aprender, reflexionar y fortalecer la inclusión, la neurodiversidad y la educación.'},
+  audios:{t:'Audios', ph:'Buscar podcasts, temas o invitados…', lead:'Conversaciones que inspiran, informan y acompañan sobre inclusión, neurodiversidad y educación.'},
+  peliculas:{t:'Películas', ph:'Buscar películas…', lead:'Historias que inspiran, sensibilizan y abren conversaciones sobre inclusión y neurodiversidad.'},
+  foro:{t:'Foro', ph:'Buscar en el foro…', lead:'Comparte experiencias, haz preguntas y aprende junto a la comunidad.'},
+  rutas:{t:'Rutas', ph:'Buscar especialistas o rutas…', lead:'Profesionales y rutas de acción para acompañar a tu familia en salud y educación.'},
+};
+const SIDE_GENERAL = [['folder','Mis cursos',''],['board','Capacitaciones','capacitaciones'],['doc','Lecturas','lecturas'],['music','Audios','audios'],['playc','Películas','peliculas'],['people','Foro','foro'],['headset','Chatbot','chatbot']];
+const SIDE_PLAT = [['plusbox','Nuevo Contenido','nuevo'],['cal','Calendario','calendario'],['heart','Notificaciones','notificaciones']];
+const CAPS = {
+  docentes:[
+    ['cap-1','Neurodiversidad y TEA','Comprender antes de intervenir','Conceptos clave, características y estrategias de apoyo en el aula.','4 videos','1 hora',30],
+    ['cap-2','Barreras para el aprendizaje','La participación en mi aula','Estrategias de Diseño Universal para el Aprendizaje (DUA) y ajustes razonables.','4 videos','1.5 horas',60],
+    ['cap-3','Mitos y Creencias','Conceptos y lenguaje respetuoso','Desmonta mitos y fortalece una mirada basada en evidencia.','4 videos','1 hora',20],
+    ['cap-4','DUA y PIAR','Valoración pedagógica','Cómo diseñar, implementar y hacer seguimiento a ajustes razonables.','4 videos','1.5 horas',45]],
+  familias:[
+    ['familia-1','Comprender sin culpa','Reconocer barreras','Qué es el TEA en lenguaje cotidiano y cómo diferenciarlo de las creencias más frecuentes.','4 videos','1 hora',30],
+    ['familia-2','Derechos y rutas','Saber me hace sentir seguro','Los derechos que la Ley 2628 de 2026 reconoce a las personas con TEA y a sus familias.','4 videos','1.5 horas',60],
+    ['cap-3','Rutinas en casa','Anticipar y acompañar','Apoyos visuales y rutinas sencillas para el día a día en familia.','4 videos','1 hora',20],
+    ['cap-4','Emociones en familia','Calma y regulación','Herramientas para acompañar las emociones intensas con calma.','4 videos','1.5 horas',45]],
+};
+const BOOKS = [
+  ['El niño','explosivo','Ross W. Greene','Un nuevo enfoque para comprender y acompañar a niños con baja tolerancia a la frustración.','#F6EBDD','#E8562A',['#E8562A','#F2A33A','#3B7DD8']],
+  ['Niños','hiperactivos','Russell A. Barkley','Guía de referencia sobre TDAH para padres y educadores.','#F3EEE4','#D7262E',['#2B5FB8','#F2A33A','#E8562A']],
+  ['Neuro','Tribus','Steve Silberman','El legado del autismo y el futuro de la neurodiversidad.','#FBF4E6','#C8202B',['#E8562A','#2B9C8A','#3B7DD8','#F2C14E'],'NeuroTribus'],
+  ['El cerebro','autista','Temple Grandin y Richard Panek','Explica cómo funciona el cerebro autista desde la ciencia y la experiencia.','#DCEAF2','#1F5C8E',['#F2C14E','#E8562A','#2B9C8A','#3B7DD8']],
+  ['Pensar','en imágenes','Temple Grandin','Un testimonio en primera persona sobre la importancia del pensamiento visual.','#F4EAD6','#1F4E79',['#1F4E79','#2B9C8A','#7FB7D6']],
+  ['El don de','la dislexia','Ronald D. Davis','Por qué algunas de las mentes más brillantes piensan de manera diferente.','#FBF0DC','#2B4C9B',['#F2A33A','#2B9C8A','#E8562A']],
+  ['El niño','altamente sensible','Elaine N. Aron','Cómo ayudar a los niños que sienten demasiado.','#EAF3EA','#2F7A86',['#7DBE8A','#F2A33A','#2F7A86']],
+  ['El cerebro','del niño','Daniel J. Siegel y Tina Payne Bryson','Estrategias para cultivar la mente en desarrollo de tu hijo.','#FBF1E3','#D3263A',['#E8562A','#F2C14E','#2B9C8A','#3B7DD8']],
+  ['Disciplina','sin lágrimas','Daniel J. Siegel y Tina Payne Bryson','Una guía para orientar con conexión emocional, sin castigos.','#F7EEE6','#2C8A9C',['#E8562A','#F2A33A','#2C8A9C']],
+  ['Cómo hablar','para que sus hijos le escuchen','Adele Faber y Elaine Mazlish','Comunicación respetuosa para escuchar y ser escuchados en casa y en el aula.','#E9F1F8','#1A3E8C',['#1A3E8C','#2B9C8A','#F2A33A']],
+];
+const MOVIES = [
+  ['Temple Grandin','2010','1h 47min','Drama','La historia real de Temple Grandin, una mujer autista que transformó su forma de ver el mundo en una fuente de innovación.',['#F6B04A','#B4521F']],
+  ['El niño que pudo volar','2021','1h 38min','Documental','Un retrato íntimo sobre la vida de un niño con autismo y su familia, sus desafíos y las oportunidades de una crianza basada en la comprensión.',['#7CC0EA','#1E4F7A']],
+  ['Intensa Mente','2015','1h 35min','Animación','Una mirada creativa al mundo emocional de una niña, que ayuda a comprender la importancia de reconocer y gestionar las emociones.',['#8E5BD6','#E9407A']],
+  ['Extraordinario','2017','1h 53min','Drama','La historia de Auggie, un niño con diferencias faciales, que nos recuerda el poder de la empatía y la importancia de construir comunidades más inclusivas.',['#4FA3E3','#F2C14E']],
+];
+const EPISODES = [
+  ['ep-1','Neurodiversidad en el aula','Episodio 1 · Voces que incluyen','Estrategias prácticas para crear aulas más inclusivas y empáticas.',23],
+  ['ep-2','Familias que acompañan','Episodio 2 · Voces que incluyen','Conversamos sobre los retos y oportunidades de las familias en la crianza de niños neurodiversos.',28],
+  ['ep-3','Mitos y realidades del TDAH','Episodio 3 · Expertos en diálogo','Un análisis claro y actualizado con especialistas.',35],
+  ['ep-4','Estrategias de regulación emocional','Episodio 4 · Herramientas para el aula','Técnicas simples para promover el bienestar en niños y niñas.',26],
+];
+const FEATURED = [
+  ['Voces que incluyen','Conversaciones reales con familias, docentes y expertos sobre educación, neurodiversidad y bienestar.',0],
+  ['Expertos en diálogo','Especialistas responden las preguntas más frecuentes sobre TDAH, autismo y aprendizaje.',2],
+  ['Herramientas para el aula','Episodios cortos con técnicas que puedes aplicar desde mañana.',3],
+];
+const PROS = [
+  ['steth','Dr. Andrés Pérez','Médico pediatra','Primera consulta, remisiones y seguimiento del desarrollo y la salud general de tu hijo.',['Presencial','EPS'],'Lun a Vie · 8:00 a. m. – 12:00 m.','#F7D6CF'],
+  ['brain','Dra. Camila Rojas','Psiquiatra infantil','Valoración diagnóstica del TEA y TDAH, y acompañamiento en salud mental de niños y adolescentes.',['Presencial','Virtual'],'Mar y Jue · 2:00 – 6:00 p. m.','#E8D4F0'],
+  ['apple','Lucía Martínez','Pedagoga','Orienta el PIAR, los ajustes razonables y el trabajo conjunto entre el colegio y la familia.',['Virtual','Colegio'],'Lun a Vie · 7:00 a. m. – 1:00 p. m.','#FBE7C2'],
+  ['puzzle','Valentina Gómez','Terapeuta ocupacional','Integración sensorial, autonomía en rutinas diarias y habilidades motoras finas.',['Presencial'],'Lun, Mié y Vie · 9:00 a. m. – 4:00 p. m.','#CDEBDD'],
+  ['chat','Daniela Herrera','Psicóloga','Regulación emocional, habilidades sociales y apoyo a la familia en el proceso.',['Presencial','Virtual'],'Mar a Sáb · 10:00 a. m. – 6:00 p. m.','#D3E6F7'],
+];
+const ROUTES = [
+  {id:'salud',t:'Ruta de salud: diagnóstico y atención',d:'Qué hacer si notas señales en el desarrollo de tu hijo y cómo llegar a un diagnóstico y a las terapias.',
+   steps:[['Observa y registra','Anota lo que notas: lenguaje, juego, contacto visual, reacciones a ruidos o cambios.'],
+          ['Pide cita en tu EPS','Solicita consulta con medicina general o pediatría y lleva tus notas.'],
+          ['Valoración especializada','El médico remite a neuropediatría o psiquiatría infantil para la valoración diagnóstica.'],
+          ['Inicia las terapias','Terapia ocupacional, de lenguaje y psicología según el plan de tratamiento.'],
+          ['Seguimiento','Revisa avances cada 3 a 6 meses y comparte los informes con el colegio.']],
+   lines:[['192','Opción 4','Ministerio de Salud · Salud mental'],['01 8000 513 700','','Supersalud · Quejas y reclamos de tu EPS']]},
+  {id:'edu',t:'Ruta educativa: inclusión en el colegio',d:'Cómo asegurar que tu hijo tenga los apoyos y ajustes que necesita para aprender y participar.',
+   steps:[['Habla con orientación escolar','Pide una reunión con orientación o coordinación y cuéntales qué necesita tu hijo.'],
+          ['Comparte valoraciones','Entrega diagnósticos e informes de terapia para que el colegio planee los apoyos.'],
+          ['Construyan el PIAR','El Plan Individual de Ajustes Razonables se elabora junto con la familia (Decreto 1421 de 2017).'],
+          ['Revisa y haz seguimiento','Revisen juntos el PIAR cada periodo y ajusten lo que no esté funcionando.'],
+          ['Si te niegan el cupo o los ajustes','Acude a la Secretaría de Educación de tu municipio. Si no responden, puedes interponer una acción de tutela.']],
+   lines:[['141','','ICBF · Protección de niños, niñas y adolescentes'],['123','','Línea de emergencias']]},
+];
+function routeProg(r){return r.steps.filter((_,j)=>S.route[r.id+j]).length}
+const FORUM_CATS = ['Todos','Neurodiversidad','Autismo','TDAH','Aula inclusiva','Familias','Recursos'];
+const POSTS = [
+  {id:'p1',n:'Laura Mejía',av:'assets/av-1.png',when:'hace 2 horas',role:'Docente',t:'¿Cómo manejar la sobrecarga sensorial en el aula?',x:'Tengo un estudiante con diagnóstico de autismo que se altera mucho con los ruidos del recreo. ¿Han implementado estrategias que funcionen en contextos de aula regular?',tags:['Autismo','Estrategias en el aula'],cats:['Autismo','Neurodiversidad','Aula inclusiva'],v:24,c:12},
+  {id:'p2',n:'Carlos Ramírez',av:'assets/av-2.png',when:'hace 5 horas',role:'Familia',t:'Recomendaciones de libros para niños con TDAH',x:'Hola, estoy buscando libros o cuentos que ayuden a mi hijo de 8 años a trabajar la atención y la regulación emocional. ¿Qué nos recomiendan?',tags:['TDAH','Lecturas'],cats:['TDAH','Familias','Recursos'],v:18,c:8},
+  {id:'p3',n:'Andrea Torres',av:'assets/av-3.png',when:'hace 1 día',role:'Docente',t:'Actividades inclusivas para trabajo en equipo',x:'¿Qué dinámicas han usado para promover la participación de todos los estudiantes, especialmente cuando hay diferentes estilos de aprendizaje?',tags:['Aula inclusiva','Estrategias en el aula'],cats:['Aula inclusiva','Neurodiversidad'],v:15,c:6},
+  {id:'p4',n:'Felipe Gómez',av:'assets/av-4.png',when:'hace 2 días',role:'Estudiante',t:'Herramientas digitales accesibles',x:'¿Conocen alguna herramienta digital gratuita que sea útil para estudiantes con dificultades de lectura?',tags:['Recursos','Tecnología'],cats:['Recursos'],v:9,c:4},
+];
+const POPULAR = [['Estrategias en el aula',24,'#3DBE9E','Aula inclusiva'],['Autismo',18,'#6FB1E6','Autismo'],['TDAH',16,'#F2C14E','TDAH'],['Aula inclusiva',14,'#EF8FA6','Aula inclusiva'],['Recursos educativos',12,'#A98BDB','Recursos']];
+
+const esc = s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let audioTimer=null, audioId=null;
+function stopAudio(){clearInterval(audioTimer);audioTimer=null;audioId=null}
+
+function sideNav(role,active){
+  const base=ROLES[role].home, gen=role==='docentes'?SIDE_GENERAL:[SIDE_GENERAL[1],['route','Rutas','rutas'],...SIDE_GENERAL.slice(2)];
+  const li=a=>a.map(([ic,t,k])=>`<li><button class="sl" ${k===''||PAGES[k]?`data-go="${k?base+'/'+k:base}"`:`data-plat="${k}"`} ${k===active?'aria-current="page"':''}>${I[ic]}${t}</button></li>`).join('');
+  return `<aside class="side" aria-label="Menú de ${ROLES[role].label}"><div><h4>GENERAL</h4><ul>${li(gen)}</ul></div><div><h4>PLATAFORMA</h4><ul>${li(SIDE_PLAT)}</ul></div></aside>`;
+}
+function acts(id,name,o={}){
+  const sv=!!S.saved[id], lk=!!S.liked[id];
+  return `<div class="acts2"><button data-act="save" data-id="${id}" aria-pressed="${sv}" aria-label="Guardar ${esc(name)}">${I.bookmark}</button>
+    <button data-act="like" data-id="${id}" aria-pressed="${lk}" aria-label="Me gusta ${esc(name)}">${I.heart}</button>
+    ${o.dl===false?'':`<button data-act="dl" data-n="${esc(name)}" aria-label="Descargar ${esc(name)}">${I.download}</button>`}
+    <button data-act="share" data-n="${esc(name)}" aria-label="Compartir ${esc(name)}">${I.share}</button>
+    ${o.more?`<button class="more" data-act="more" data-n="${esc(name)}" aria-label="Más opciones">${I.dots}</button>`:''}</div>`;
+}
+function pageHead(k,extra){
+  const P=PAGES[k];
+  return `<header class="ph"><h1>${P.t}</h1><div class="ph-tools"><label class="search">${I.search}<input type="search" id="q" placeholder="${P.ph}" aria-label="${P.ph.replace('…','')}"></label>
+    ${extra||`<div class="fwrap"><button class="fbtn" id="fbtn" aria-label="Filtrar" aria-haspopup="true" aria-expanded="false">${I.sliders}</button>
+      <div class="fmenu" id="fmenu" hidden>${[['all','Todos'],['saved','Guardados'],['liked','Me gustan']].map(([v,l])=>`<button data-f="${v}" aria-pressed="${S.filter===v}">${l}</button>`).join('')}</div></div>`}
+  </div></header><p class="lead">${P.lead}</p>`;
+}
+function coverArt(cols,seed){
+  let s='';for(let i=0;i<9;i++){const a=(i*137+seed*53)%360*Math.PI/180,r=18+((i*29+seed*11)%22);
+    s+=`<circle cx="${60+Math.cos(a)*r}" cy="${50+Math.sin(a)*r*.8}" r="${9+((i*7+seed)%10)}" fill="${cols[i%cols.length]}" opacity=".85"/>`}
+  return `<svg viewBox="0 0 120 100" aria-hidden="true">${s}</svg>`;
+}
+function posterArt(k){
+  const arts=[
+    '<circle cx="50" cy="70" r="30" fill="#FFD27A" opacity=".8"/><path d="M0 100 Q30 80 50 92 T100 84 V100Z" fill="#7A3B1D"/>',
+    '<path d="M0 100 Q40 70 100 88 V100Z" fill="#2E7D4F"/><circle cx="70" cy="30" r="8" fill="#fff" opacity=".8"/><path d="M20 40 l10-6 4 10z" fill="#fff"/>',
+    '<circle cx="25" cy="60" r="14" fill="#F2C14E"/><circle cx="50" cy="55" r="16" fill="#3B7DD8"/><circle cx="75" cy="62" r="13" fill="#E8562A"/><circle cx="40" cy="80" r="11" fill="#7DBE8A"/><circle cx="64" cy="82" r="10" fill="#B07BE0"/>',
+    '<circle cx="50" cy="66" r="26" fill="#fff" opacity=".85"/><circle cx="50" cy="66" r="18" fill="#2E5B8A" opacity=".6"/><path d="M0 100 Q50 80 100 100Z" fill="#2E7D4F"/>'];
+  return `<svg class="art" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${arts[k]}</svg>`;
+}
+function capProg(role,i){return S.train[`${role}-cap${i}`]??CAPS[role][i][6]}
+function rolePage(role,k){
+  stopAudio();
+  const user=ROLES[role].user;
+  let body='';
+  if(k==='capacitaciones'){
+    const L=CAPS[role], avg=Math.round(L.reduce((a,_,i)=>a+capProg(role,i),0)/L.length), lvl=1+Math.min(2,Math.floor(avg/40));
+    body=pageHead(k)+`<div class="caps" id="list">${L.map(([img,h,s,d,v,hr],i)=>{const p=capProg(role,i);return `<article class="cap" data-q="${esc(h+' '+s+' '+d)}" data-id="cap-${role}-${i}">
+      <div class="ph2"><img src="assets/${img}.jpg" alt=""><button class="pbtn" data-cap="${i}" aria-label="Reproducir ${esc(h)}">${I.play}</button></div>
+      <div><h3>${h}</h3><p class="s">${s}</p><p class="d">${d}</p>
+      <div class="m"><span>${I.video}${v}</span><i></i><span>${I.hour}${hr}</span></div>
+      <div class="pr"><div class="pbar" role="progressbar" aria-label="Progreso de ${esc(h)}" aria-valuenow="${p}" aria-valuemin="0" aria-valuemax="100"><i style="width:${p}%"></i></div><b>${p}%</b><button class="rbtn" data-capinfo="${i}" aria-label="Ver lecciones de ${esc(h)}">${I.chevR}</button></div></div></article>`}).join('')}</div>
+      <section class="level"><div><h3>Nivel ${lvl}</h3><p>Completa las capacitaciones para avanzar al siguiente nivel.</p></div>
+      <div><div class="top"><span>Progreso general</span><span>${avg}%</span></div><div class="segbar" role="progressbar" aria-label="Progreso general" aria-valuenow="${avg}" aria-valuemin="0" aria-valuemax="100"><i style="width:${avg}%"></i><b style="left:25%"></b><b style="left:50%"></b><b style="left:75%"></b></div></div></section>`;
+  }
+  if(k==='lecturas'){
+    body=pageHead(k)+`<div class="books" id="list">${BOOKS.map(([a,b,au,d,bg,ac,cols,full],i)=>{const id='bk'+i,n=full||a+' '+b;return `<article class="bk" data-q="${esc(n+' '+au+' '+d)}" data-id="${id}">
+      <button class="cover" data-book="${i}" style="background:${bg}" aria-label="Ver detalles de ${esc(n)}"><span class="t1">${a}</span><span class="t2" style="color:${ac}">${b}</span>${coverArt(cols,i)}<span class="au">${au.split(' y ')[0]}</span></button>
+      <h3>${n}</h3><p class="au2">${au}</p><p class="d">${d}</p>${acts(id,n,{more:true})}</article>`}).join('')}</div>`;
+  }
+  if(k==='audios'){
+    const f=FEATURED[S.feat%FEATURED.length], series=role==='familias'?'Herramientas para casa':'Herramientas para el aula';
+    body=pageHead(k)+`<section class="hero2" aria-label="Podcast destacado"><img src="assets/pod-hero.jpg" alt=""><div class="in"><span class="tag">PODCAST DESTACADO</span><h2 id="fT">${f[0]}</h2><p id="fP">${f[1]}</p>
+      <button class="go2" id="listen" data-ep="${f[2]}"><b>${I.play}</b>Escuchar ahora</button></div>
+      <div class="dots">${FEATURED.map((_,i)=>`<button data-feat="${i}" aria-pressed="${i===S.feat%FEATURED.length}" aria-label="Destacado ${i+1}"></button>`).join('')}</div></section>
+      <div class="eph"><h2>Episodios recientes</h2><button id="allEps">Ver todos ${I.arrowR}</button></div>
+      <div class="eps" id="list">${EPISODES.map(([img,t,se,d,min],i)=>{const id='ep'+i,sec=S.audio[id]||Math.round(min*60*.12),se2=i===3?se.replace('Herramientas para el aula',series):se;return `<article class="ep" data-q="${esc(t+' '+se2+' '+d)}" data-id="${id}">
+        <div class="th"><img src="assets/${img}.jpg" alt=""><span>${min} min</span></div><h3>${t}</h3><p class="se">${se2}</p><p class="d">${d}</p>
+        <div class="player"><button class="pl" data-ep="${i}" aria-label="Reproducir ${esc(t)}">${I.play}</button><div class="pbar"><i style="width:${sec/(min*60)*100}%"></i></div><time>${fmt(sec)} / ${min}:00</time></div>
+        ${acts(id,t)}</article>`}).join('')}</div>`;
+  }
+  if(k==='peliculas'){
+    body=pageHead(k)+`<div class="movies" id="list">${MOVIES.map(([t,y,du,g,d,c],i)=>{const id='mv'+i;return `<article class="mv" data-q="${esc(t+' '+g+' '+d)}" data-id="${id}">
+      <button class="poster" data-mv="${i}" style="background:linear-gradient(160deg,${c[0]},${c[1]})" aria-label="Ver ${esc(t)}"><span class="pt">${t}</span>${posterArt(i)}<span class="pbtn" aria-hidden="true">${I.play}</span></button>
+      <div><h3>${t}</h3><div class="mt"><span>${y}</span><i></i><span>${du}</span><i></i><span>${g}</span></div><p class="d">${d}</p>${acts(id,t,{dl:false,more:true})}</div></article>`}).join('')}</div>`;
+  }
+  if(k==='rutas'){
+    body=pageHead(k,' ')+`<div id="list">
+      <div class="eph"><h2>Profesionales que te acompañan</h2></div>
+      <div class="pros">${PROS.map(([ic,n,r,d,tags,h,bg],i)=>`<article class="pro" data-q="${esc(n+' '+r+' '+d)}" data-id="pro${i}" style="--bg:${bg}">
+        <div class="pav">${I[ic]}</div><h3>${n}</h3><p class="prole">${r}</p><p class="d">${d}</p>
+        <div class="tags">${tags.map(t=>`<span>${t}</span>`).join('')}</div><p class="hrs">${I.cal}${h}</p>
+        <div class="pbtns"><button class="newbtn" data-cita="${i}">Agendar cita</button><button class="ghost" data-pro="${i}">Ver perfil</button></div></article>`).join('')}</div>
+      <div class="eph"><h2>Rutas de acción</h2></div>
+      <div class="rts">${ROUTES.map(r=>{const p=routeProg(r);return `<article class="rt" data-q="${esc(r.t+' '+r.d+' '+r.steps.map(s=>s.join(' ')).join(' '))}" data-id="rt-${r.id}">
+        <header><span class="rti">${I.route}</span><div><h3>${r.t}</h3><p>${r.d}</p></div></header>
+        <div class="rtp"><div class="pbar"><i style="width:${p/r.steps.length*100}%"></i></div><b>${p}/${r.steps.length} pasos</b></div>
+        <ol class="steps2">${r.steps.map(([h,s],j)=>`<li><label><input type="checkbox" data-step="${r.id+j}" ${S.route[r.id+j]?'checked':''}><span><b>${h}</b><small>${s}</small></span></label></li>`).join('')}</ol>
+        <div class="lines"><h4>Líneas de atención nacional</h4>${r.lines.map(([n,o,l])=>`<a class="line" href="tel:${n.replace(/\s/g,'')}">${I.phone}<span><b>${n}${o?` <em>${o}</em>`:''}</b><small>${l}</small></span></a>`).join('')}</div>
+      </article>`}).join('')}</div>
+      <p class="sos">${I.phone}<span>Si hay una emergencia o riesgo inmediato, llama a la <b>Línea 123</b>.</span></p>
+    </div>`;
+  }
+  if(k==='foro'){
+    body=pageHead(k,`<button class="newbtn" id="newPost">${I.plus}Nueva publicación</button>`)+`<div class="forum"><div>
+      <div class="chips" role="group" aria-label="Filtrar por tema">${FORUM_CATS.map(c=>`<button data-cat="${c}" aria-pressed="${S.cat===c}">${c}</button>`).join('')}</div>
+      <div class="posts" id="list"></div></div>
+      <aside class="aside"><div class="box"><h3>${I.people}Sobre este foro</h3><p>Un espacio para compartir experiencias, hacer preguntas y construir conocimiento sobre inclusión, neurodiversidad y educación.</p>
+        <div class="nums"><div><b>1.2K</b><small>miembros</small></div><div><b>${320+S.posts.length}</b><small>publicaciones</small></div><div><b>56<span class="live"></span></b><small>en línea</small></div></div></div>
+        <div class="box"><h3>${I.trend}Temas populares</h3><ol class="pop">${POPULAR.map(([t,n,c,cat],i)=>`<li><button data-cat="${cat}"><i style="background:${c}">${i+1}</i><span>${t}</span><small>${n}</small></button></li>`).join('')}</ol></div>
+        <div class="box ask">${I.bulb.replace('<svg','<svg class="b"')}<div><b>¿Tienes una pregunta?</b><p>Publica en el foro y recibe ideas y consejos de la comunidad.</p></div><button class="rbtn" id="askBtn" aria-label="Nueva publicación">${I.arrowR}</button></div>
+      </aside></div>`;
+  }
+  view.innerHTML=`<div class="dash">${sideNav(role,k)}<div class="main"><div class="page">${body}</div></div></div>`;
+  bindPage(role,k);
+}
+function citaModal(i){
+  const [ic,n,r]=PROS[i],m=modal(`<h3>Agendar cita</h3><p style="color:var(--muted)">${n} · ${r}</p><form class="mform" id="cf2"><label for="cn">Nombre de tu hijo o hija</label><input id="cn" required>
+    <label for="cd">Fecha preferida</label><input id="cd" type="date" required><label for="cm">Modalidad</label><select id="cm">${PROS[i][4].filter(t=>t!=='EPS'&&t!=='Colegio').map(t=>`<option>${t}</option>`).join('')||'<option>Presencial</option>'}</select>
+    <label for="cmo">Motivo de la consulta</label><textarea id="cmo"></textarea><button class="newbtn" style="justify-content:center">Solicitar cita</button></form>`);
+  $('#cn',m).focus();$('#cf2',m).onsubmit=e=>{e.preventDefault();if(!$('#cn',m).value.trim()||!$('#cd',m).value)return;m.remove();toast('Solicitud enviada a '+n+'. Te confirmaremos por correo')};
+}
+function fmt(s){return Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0')}
+function renderPosts(){
+  const q=($('#q')?.value||'').toLowerCase(), all=[...S.posts,...POSTS];
+  const list=all.filter(p=>(S.cat==='Todos'||p.cats.includes(S.cat))&&(!q||(p.t+' '+p.x+' '+p.tags.join(' ')+' '+p.n).toLowerCase().includes(q)));
+  $('#list').innerHTML=list.length?list.map(p=>{const my=S.votes[p.id]||0,cm=(S.cmts[p.id]||0)+p.c;return `<article class="post">
+    <div class="vote"><button data-vote="${p.id}" data-d="1" aria-pressed="${my===1}" aria-label="Votar a favor">${I.up}</button><span>${p.v+my}</span><button data-vote="${p.id}" data-d="-1" aria-pressed="${my===-1}" aria-label="Votar en contra">${I.down}</button></div>
+    ${p.av?`<img class="avatar" src="${p.av}" alt="">`:`<span class="avatar" aria-hidden="true">${esc(p.n[0])}</span>`}
+    <div><div class="who"><b>${esc(p.n)}</b>· ${p.when} · <span class="role ${p.role}">${p.role}</span></div><h3>${esc(p.t)}</h3><p>${esc(p.x)}</p><div class="tags">${p.tags.map(t=>`<span>${esc(t)}</span>`).join('')}</div></div>
+    <div class="side2"><button data-cmt="${p.id}" aria-label="${cm} comentarios, responder">${I.comment}${cm}</button><button data-act="more" data-n="${esc(p.t)}" aria-label="Más opciones">${I.dots}</button></div></article>`}).join('')
+    :`<p class="empty">No hay publicaciones con ese filtro.</p>`;
+}
+function applyFilter(){
+  const q=($('#q')?.value||'').toLowerCase(); let n=0;
+  document.querySelectorAll('#list [data-q]').forEach(el=>{const id=el.dataset.id;
+    const ok=(!q||el.dataset.q.toLowerCase().includes(q))&&(S.filter==='all'||(S.filter==='saved'?S.saved[id]:S.liked[id]));
+    el.hidden=!ok; if(ok)n++});
+  let e=$('#emptyMsg'); if(!n){if(!e)$('#list').insertAdjacentHTML('afterend','<p class="empty" id="emptyMsg">No encontramos resultados. Prueba con otra palabra o filtro.</p>')}else e?.remove();
+  $('#fbtn')?.classList.toggle('on',S.filter!=='all');
+}
+function postModal(role){
+  const m=modal(`<h3>Nueva publicación</h3><form class="mform" id="pf"><label for="pt">Título</label><input id="pt" maxlength="90" required>
+    <label for="px">Cuéntale a la comunidad</label><textarea id="px" maxlength="600" required></textarea>
+    <label for="pc">Tema</label><select id="pc">${FORUM_CATS.slice(1).map(c=>`<option>${c}</option>`).join('')}</select>
+    <button class="newbtn" style="justify-content:center">Publicar</button></form>`);
+  $('#pt',m).focus();
+  $('#pf',m).onsubmit=e=>{e.preventDefault();const t=$('#pt',m).value.trim(),x=$('#px',m).value.trim(),c=$('#pc',m).value;if(!t||!x)return;
+    S.posts.unshift({id:'u'+Date.now(),n:ROLES[role].user,av:'',when:'ahora',role:role==='docentes'?'Docente':'Familia',t,x,tags:[c],cats:[c],v:1,c:0});save();m.remove();S.cat='Todos';rolePage(role,'foro');toast('¡Tu publicación ya está en el foro!')};
+}
+function bindPage(role,k){
+  const pg=$('.page');
+  $('#q')?.addEventListener('input',()=>k==='foro'?renderPosts():applyFilter());
+  const fb=$('#fbtn'); if(fb){const fm=$('#fmenu');fb.onclick=e=>{e.stopPropagation();fm.hidden=!fm.hidden;fb.setAttribute('aria-expanded',!fm.hidden)};
+    fm.onclick=e=>{const b=e.target.closest('[data-f]');if(!b)return;S.filter=b.dataset.f;fm.querySelectorAll('[data-f]').forEach(x=>x.setAttribute('aria-pressed',x===b));fm.hidden=true;fb.setAttribute('aria-expanded','false');applyFilter()};
+    document.addEventListener('click',function off(e){if(!document.body.contains(fm)){document.removeEventListener('click',off);return}if(!e.target.closest('.fwrap')){fm.hidden=true;fb.setAttribute('aria-expanded','false')}})}
+  if(k!=='foro') applyFilter();
+  pg.addEventListener('click',e=>{
+    const a=e.target.closest('[data-act]');
+    if(a){const t=a.dataset.act;
+      if(t==='save'||t==='like'){const o=t==='save'?S.saved:S.liked,id=a.dataset.id;o[id]=!o[id];if(!o[id])delete o[id];save();a.setAttribute('aria-pressed',!!o[id]);
+        toast(t==='save'?(o[id]?'Guardado en tu biblioteca':'Quitado de guardados'):(o[id]?'Te gusta':'Ya no te gusta'));if(S.filter!=='all')applyFilter();return}
+      if(t==='dl'){toast(a.dataset.n+': se guardó en tus descargas de Te Reto');return}
+      if(t==='share'){const txt='Te Reto · '+a.dataset.n;(navigator.clipboard?.writeText(txt)||Promise.reject()).then(()=>toast('Enlace copiado'),()=>toast('Comparte: '+txt));return}
+      if(t==='more'){modal(`<h3>${a.dataset.n}</h3><div class="reads"><button data-x="list">Agregar a una lista<span>›</span></button><button data-x="rep">Reportar un problema<span>›</span></button></div>`).addEventListener('click',ev=>{const x=ev.target.closest('[data-x]');if(!x)return;ev.currentTarget.remove();toast(x.dataset.x==='list'?'Agregado a tu lista':'Gracias, revisaremos tu reporte')});return}
+    }
+    const cp=e.target.closest('[data-cap]');
+    if(cp){const i=+cp.dataset.cap,p=Math.min(100,capProg(role,i)+25);S.train[`${role}-cap${i}`]=p;save();rolePage(role,k);toast(p>=100?'¡Capacitación completada!':'Avanzaste en la lección: '+p+'%');return}
+    const ci=e.target.closest('[data-capinfo]');
+    if(ci){const i=+ci.dataset.capinfo,c=CAPS[role][i],p=capProg(role,i),done=Math.floor(p/25);
+      modal(`<h3>${c[1]}</h3><p style="color:var(--muted);margin-bottom:12px">${c[2]} · ${c[5]}</p><div class="reads">${['Introducción','Conceptos clave','Estrategias en la práctica','Cierre y reflexión'].map((l,j)=>`<button data-l="${j}"><span>${j<done?'✓ ':''}Video ${j+1}: ${l}</span><span>${j<done?'Visto':'›'}</span></button>`).join('')}</div>`)
+        .addEventListener('click',ev=>{if(ev.target.closest('[data-l]')){ev.currentTarget.remove();$(`[data-cap="${i}"]`).click()}});return}
+    const bk=e.target.closest('[data-book]');
+    if(bk){const [x,y,au,d,,,,full]=BOOKS[+bk.dataset.book],m=modal(`<h3>${full||x+' '+y}</h3><p style="color:var(--muted)">${au}</p><p style="margin-top:10px">${d}</p><div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap"><button class="newbtn" id="rd">Leer ahora</button><button class="btn speak" id="hear" style="padding:8px 20px;font-size:.9rem">Escuchar reseña</button></div>`);
+      $('#rd',m).onclick=()=>{m.remove();toast('Abriendo '+x+' '+y+' en tu biblioteca')};$('#hear',m).onclick=ev=>speak(`${x} ${y}, de ${au}. ${d}`,ev.currentTarget);return}
+    const mv=e.target.closest('[data-mv]');
+    if(mv){const [t,y,du,g,d]=MOVIES[+mv.dataset.mv],m=modal(`<h3>${t}</h3><p style="color:var(--muted)">${y} · ${du} · ${g}</p><p style="margin-top:10px">${d}</p><p style="margin-top:10px;font-size:.85rem;color:var(--muted)">Incluye una guía de conversación para después de verla.</p><button class="newbtn" id="wt" style="margin-top:16px">Ver tráiler</button>`);
+      $('#wt',m).onclick=()=>{m.remove();toast('El tráiler de '+t+' se abrirá en el reproductor')};return}
+    const pl=e.target.closest('[data-ep]');
+    if(pl){playEp(+pl.dataset.ep);return}
+    const fd=e.target.closest('[data-feat]');
+    if(fd){S.feat=+fd.dataset.feat;const f=FEATURED[S.feat];$('#fT').textContent=f[0];$('#fP').textContent=f[1];$('#listen').dataset.ep=f[2];document.querySelectorAll('[data-feat]').forEach(x=>x.setAttribute('aria-pressed',x===fd));return}
+    if(e.target.closest('#allEps')){toast('Pronto encontrarás aquí todos los episodios');return}
+    const ct=e.target.closest('[data-cat]');
+    if(ct){S.cat=ct.dataset.cat;document.querySelectorAll('.chips [data-cat]').forEach(x=>x.setAttribute('aria-pressed',x.dataset.cat===S.cat));renderPosts();return}
+    const vt=e.target.closest('[data-vote]');
+    if(vt){const id=vt.dataset.vote,d=+vt.dataset.d;S.votes[id]=S.votes[id]===d?0:d;save();renderPosts();return}
+    const cm=e.target.closest('[data-cmt]');
+    if(cm){const p=[...S.posts,...POSTS].find(x=>x.id===cm.dataset.cmt),m=modal(`<h3>${esc(p.t)}</h3><p style="color:var(--muted);font-size:.9rem">${esc(p.n)} · ${p.when}</p><form class="mform" id="cf"><label for="ct">Tu respuesta</label><textarea id="ct" required></textarea><button class="newbtn" style="justify-content:center">Responder</button></form>`);
+      $('#ct',m).focus();$('#cf',m).onsubmit=ev=>{ev.preventDefault();if(!$('#ct',m).value.trim())return;S.cmts[p.id]=(S.cmts[p.id]||0)+1;save();m.remove();renderPosts();toast('Respuesta publicada')};return}
+    if(e.target.closest('#newPost,#askBtn')){postModal(role);return}
+  });
+  if(k==='rutas'){
+    pg.addEventListener('change',e=>{const c=e.target.closest('[data-step]');if(!c)return;S.route[c.dataset.step]=c.checked;if(!c.checked)delete S.route[c.dataset.step];save();
+      const card=c.closest('.rt'),r=ROUTES.find(x=>'rt-'+x.id===card.dataset.id),p=routeProg(r);card.querySelector('.rtp i').style.width=p/r.steps.length*100+'%';card.querySelector('.rtp b').textContent=`${p}/${r.steps.length} pasos`;
+      if(p===r.steps.length)toast('¡Completaste la '+r.t.split(':')[0].toLowerCase()+'!')});
+    pg.addEventListener('click',e=>{
+      const v=e.target.closest('[data-pro]');
+      if(v){const [ic,n,r,d,tags,h]=PROS[+v.dataset.pro],m=modal(`<h3>${n}</h3><p style="color:var(--muted)">${r}</p><p style="margin-top:10px">${d}</p><p style="margin-top:10px;font-size:.9rem"><b>Atención:</b> ${tags.join(' · ')}<br><b>Horario:</b> ${h}</p><button class="newbtn" id="pc2" style="margin-top:16px">Agendar cita</button>`);
+        $('#pc2',m).onclick=()=>{m.remove();citaModal(+v.dataset.pro)};return}
+      const c=e.target.closest('[data-cita]'); if(c){citaModal(+c.dataset.cita);return}
+    });
+  }
+  if(k==='foro') renderPosts();
+}
+function playEp(i){
+  const id='ep'+i,min=EPISODES[i][4],card=$(`.ep[data-id="${id}"]`);
+  const setIcon=(on)=>{const b=card?.querySelector('.pl');if(b){b.innerHTML=on?I.pause:I.play;b.setAttribute('aria-label',(on?'Pausar ':'Reproducir ')+EPISODES[i][1])}};
+  if(audioId===i){stopAudio();setIcon(false);toast('Pausado');return}
+  if(audioId!==null){const prev=audioId;stopAudio();const pc=$(`.ep[data-id="ep${prev}"] .pl`);if(pc)pc.innerHTML=I.play}
+  audioId=i;setIcon(true);toast('Reproduciendo: '+EPISODES[i][1]);card?.scrollIntoView({behavior:'smooth',block:'nearest'});
+  audioTimer=setInterval(()=>{let s=(S.audio[id]||Math.round(min*60*.12))+15;if(s>=min*60){s=min*60;stopAudio();setIcon(false)}S.audio[id]=s;save();
+    if(card){card.querySelector('.pbar i').style.width=s/(min*60)*100+'%';card.querySelector('time').textContent=fmt(s)+' / '+min+':00'}},1000);
+}
+function platAction(role,k){
+  if(k==='chatbot'){const m=modal(`<h3>Chatbot Te Reto</h3><div class="chat" id="chat"><p class="bot">Hola, ${ROLES[role].user}. ¿En qué te puedo ayudar hoy?</p></div><form class="mform" id="chf" style="grid-template-columns:1fr auto"><input id="chi" placeholder="Escribe tu pregunta" aria-label="Escribe tu pregunta"><button class="newbtn">Enviar</button></form>`);
+    $('#chi',m).focus();$('#chf',m).onsubmit=e=>{e.preventDefault();const v=$('#chi',m).value.trim();if(!v)return;const c=$('#chat',m);c.insertAdjacentHTML('beforeend',`<p class="me">${esc(v)}</p>`);$('#chi',m).value='';
+      const l=v.toLowerCase(),r=l.includes('tdah')?'Te recomiendo el episodio “Mitos y realidades del TDAH” en Audios y el libro “Niños hiperactivos” en Lecturas.':l.includes('autis')||l.includes('tea')?'Empieza por la capacitación “Neurodiversidad y TEA” y la lectura “El cerebro autista”.':'Puedo ayudarte a encontrar capacitaciones, lecturas, audios o películas. También puedes preguntar en el Foro.';
+      setTimeout(()=>{c.insertAdjacentHTML('beforeend',`<p class="bot">${r}</p>`);c.scrollTop=c.scrollHeight},500)};return}
+  if(k==='nuevo'){const m=modal(`<h3>Nuevo contenido</h3><form class="mform" id="nfm"><label for="nt">Título</label><input id="nt" required><label for="ntp">Tipo</label><select id="ntp">${role==='docentes'?'<option>Curso</option>':''}<option>Lectura</option><option>Audio</option><option>Película</option></select><label for="nd">Descripción</label><textarea id="nd"></textarea><button class="newbtn" style="justify-content:center">Enviar</button></form>`);
+    $('#nt',m).focus();$('#nfm',m).onsubmit=e=>{e.preventDefault();if(!$('#nt',m).value.trim())return;m.remove();toast('Recibimos tu contenido. Lo revisaremos pronto')};return}
+  if(k==='calendario'){modal(`<h3>Calendario</h3><div class="evs">${[['04','NOV','Taller: Aula inclusiva','4:00 p. m. · Virtual'],['12','NOV','Escuela de familias','6:00 p. m. · Auditorio'],['23','NOV','Cierre del Nivel 1 de capacitaciones','Todo el día']].map(([d,mo,t,s])=>`<div><b>${d}<br>${mo}</b><span><strong>${t}</strong><br><small>${s}</small></span></div>`).join('')}</div>`);return}
+  if(k==='notificaciones'){modal(`<h3>Notificaciones</h3><div class="evs">${[['💬','Laura Mejía respondió en el foro'],['🎧','Nuevo episodio: Estrategias de regulación emocional'],['📚','Se agregó “El niño altamente sensible” a Lecturas']].map(([i,t])=>`<div><b style="font-size:1.2rem">${i}</b><span>${t}</span></div>`).join('')}</div>`);return}
+}
+
 /* ---------- router ---------- */
 function render(){
-  const r=(location.hash||'#inicio').slice(1);
-  try{window.speechSynthesis?.cancel()}catch(e){} speaking=null;
+  const full=(location.hash||'#inicio').slice(1), [r,sub]=full.split('/');
+  try{window.speechSynthesis?.cancel()}catch(e){} speaking=null; stopAudio(); document.querySelectorAll('.modal').forEach(m=>m.remove());
   renderNav(r);
   if(ROLES[r]) login(r);
   else if(r==='adan') kidHome();
   else if(r==='reto') kidReto();
   else if(r==='insignia') kidBadge();
-  else if(r==='alberto') teacher();
-  else if(r==='maria') family();
+  else if(r==='alberto') PAGES[sub]&&sub!=='rutas'?rolePage('docentes',sub):teacher();
+  else if(r==='maria') PAGES[sub]?rolePage('familias',sub):family();
   else if(r==='colegio') institution();
   else { renderNav('inicio'); landing(); }
-  if(r!=='inicio'||!location.hash) window.scrollTo(0,0);
+  if(full!=='inicio'||!location.hash) window.scrollTo(0,0);
 }
 window.addEventListener('hashchange',render);
 render();
